@@ -10,7 +10,7 @@ from flask import Flask
 from flask import render_template
 
 app = Flask(__name__)
-
+"""The flask application instance is given the name app and given to the variable __name__"""
 
 @app.route("/states_list", strict_slashes=False)
 def states_list():
@@ -20,7 +20,7 @@ def states_list():
     """
     states = storage.all("State")
     return render_template("7-states_list.html", states=states)
-
+    """The render_template fucntion has rendered a the template called 7-states_list.html"""
 
 @app.teardown_appcontext
 def teardown(exc):
@@ -30,3 +30,4 @@ def teardown(exc):
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0")
+"""If __name__ is the same as __main__ let the app be hosted on 0.0.0.0"""
