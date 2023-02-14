@@ -6,8 +6,11 @@ Routes:
     /states_list: HTML page with a list of all State objects in DBStorage.
 """
 from models import storage
+"""This is importing the module storage from the location models"""
 from flask import Flask
+"""In order to use the flask package Flask has be imported"""
 from flask import render_template
+"""The render_template is used to render a template file"""
 
 app = Flask(__name__)
 """The flask application instance is given the name app and given to the variable __name__"""
